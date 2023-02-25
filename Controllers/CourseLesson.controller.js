@@ -40,12 +40,3 @@ module.exports.create = async (req, res) => {
     });
   }
 };
-module.exports.findOneCourse = async (req, res) => {
-  try {
-  } catch (err) {
-    res.status(400).send({
-      status: 400,
-      error: err.message,
-    });
-  }
-};

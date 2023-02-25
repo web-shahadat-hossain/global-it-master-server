@@ -39,7 +39,7 @@ const upload = multer({
 
 router
   .route("/")
-  .get(courseController.getALLCourse)
+  .get(jwtVerify, courseController.getALLCourse)
   .post(
     upload.fields([
       {
@@ -49,6 +49,5 @@ router
     ]),
     courseController.create
   );
-router.route("/id").get(courseController.findOneCourse);
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 var cors = require("cors");
+const path = require("path");
 
 //middleware
 app.use(cors());
@@ -15,5 +16,6 @@ app.use("/app/v1/user", userRouter);
 const CourseLesson = require("./Routers/CourseLesson.route");
 
 app.use("/app/v1/course", CourseLesson);
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 module.exports = app;
