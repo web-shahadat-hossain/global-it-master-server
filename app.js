@@ -11,4 +11,9 @@ const userRouter = require("./Routers/user.router");
 
 app.use("/app/v1/user", userRouter);
 
+// Course_Lesson
+const CourseLesson = require("./Routers/CourseLesson.route");
+
+app.use("/app/v1/course", CourseLesson);
+
 module.exports = app;
